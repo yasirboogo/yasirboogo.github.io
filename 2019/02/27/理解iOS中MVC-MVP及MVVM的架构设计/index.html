@@ -116,24 +116,25 @@
   </script>
 
 
-  <meta name="description" content="Hey，骚年，我带你装逼去呀！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="欢迎大家到此一游！">
-<meta property="og:url" content="https://yasirboogo.github.io/messages/index.html">
+  <meta name="description" content="抛出问题问题一：何为架构设计？一个整体的分层? 逻辑清晰? 还是清晰的分工? 对于架构模式来说并没有一个非常明确的定义, 比较抽象, 在于设计在于架构, 不管是小到类与类之间的交互, 还是不同的小模块, 小版块之间, 甚至于在不同的业务之间, 我们都可以去从架构的方面去理解, 去分析。 问题二：为什么要关注架构设计？因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干复杂的事情，你会">
+<meta name="keywords" content="MVC,MVP,MVVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解iOS中MVC、MVP及MVVM的架构设计">
+<meta property="og:url" content="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/index.html">
 <meta property="og:site_name" content="Hey，骚年">
-<meta property="og:description" content="Hey，骚年，我带你装逼去呀！">
+<meta property="og:description" content="抛出问题问题一：何为架构设计？一个整体的分层? 逻辑清晰? 还是清晰的分工? 对于架构模式来说并没有一个非常明确的定义, 比较抽象, 在于设计在于架构, 不管是小到类与类之间的交互, 还是不同的小模块, 小版块之间, 甚至于在不同的业务之间, 我们都可以去从架构的方面去理解, 去分析。 问题二：为什么要关注架构设计？因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干复杂的事情，你会">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-16T03:23:02.000Z">
+<meta property="og:updated_time" content="2019-02-27T09:12:16.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欢迎大家到此一游！">
-<meta name="twitter:description" content="Hey，骚年，我带你装逼去呀！">
+<meta name="twitter:title" content="理解iOS中MVC、MVP及MVVM的架构设计">
+<meta name="twitter:description" content="抛出问题问题一：何为架构设计？一个整体的分层? 逻辑清晰? 还是清晰的分工? 对于架构模式来说并没有一个非常明确的定义, 比较抽象, 在于设计在于架构, 不管是小到类与类之间的交互, 还是不同的小模块, 小版块之间, 甚至于在不同的业务之间, 我们都可以去从架构的方面去理解, 去分析。 问题二：为什么要关注架构设计？因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干复杂的事情，你会">
 
 
 
 
 
 
-  <link rel="canonical" href="https://yasirboogo.github.io/messages/"/>
+  <link rel="canonical" href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/"/>
 
 
 
@@ -143,7 +144,7 @@
   };
 </script>
 
-  <title>欢迎大家到此一游！ | Hey，骚年</title>
+  <title>理解iOS中MVC、MVP及MVVM的架构设计 | Hey，骚年</title>
   
 
 
@@ -262,7 +263,7 @@
         
         
           
-          <li class="menu-item menu-item-messages menu-item-active">
+          <li class="menu-item menu-item-messages">
     <a href="/messages" rel="section">
       <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />留言板</a>
   </li>
@@ -282,28 +283,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -354,43 +333,274 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yasirboogo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hey，骚年">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">欢迎大家到此一游！</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">理解iOS中MVC、MVP及MVVM的架构设计
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+                
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T15:59:55+08:00">2019-02-27</time>
+            
+
+            
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS/架构设计/" itemprop="url" rel="index"><span itemprop="name">架构设计</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/" itemprop="commentCount"></span>
+                </a>
+              </span>条
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+	
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="抛出问题"><a href="#抛出问题" class="headerlink" title="抛出问题"></a>抛出问题</h2><h3 id="问题一：何为架构设计？"><a href="#问题一：何为架构设计？" class="headerlink" title="问题一：何为架构设计？"></a>问题一：何为架构设计？</h3><p>一个整体的分层? 逻辑清晰? 还是清晰的分工? 对于架构模式来说并没有一个非常明确的定义, 比较抽象, 在于设计在于架构, 不管是小到类与类之间的交互, 还是不同的小模块, 小版块之间, 甚至于在不同的业务之间, 我们都可以去从架构的方面去理解, 去分析。</p>
+<h3 id="问题二：为什么要关注架构设计？"><a href="#问题二：为什么要关注架构设计？" class="headerlink" title="问题二：为什么要关注架构设计？"></a>问题二：为什么要关注架构设计？</h3><p>因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干复杂的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug.当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中会被忽略。</p>
+<h2 id="MVC、MVP及MVVM介绍"><a href="#MVC、MVP及MVVM介绍" class="headerlink" title="MVC、MVP及MVVM介绍"></a>MVC、MVP及MVVM介绍</h2><h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><h3 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h3><h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3>
       
     </div>
+
     
+
+    
+    
+    
+
+	<div>
+	  
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	  
+	</div>
+	
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/">理解iOS中MVC、MVP及MVVM的架构设计</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 yasirboogo 的个人博客">yasirboogo</a></p>
+  <p><span>发布时间:</span>2019年02月27日 - 15:02</p>
+  <p><span>最后更新:</span>2019年02月27日 - 17:02</p>
+  <p><span>原始链接:</span><a href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/" title="理解iOS中MVC、MVP及MVVM的架构设计">https://yasirboogo.github.io/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC-MVP及MVVM的架构设计/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success",
+		  wi
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+	</div>
+	
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="yasirboogo 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MVC/" rel="tag"><i class="fa fa-tag"></i> MVC</a>
+          
+            <a href="/tags/MVP/" rel="tag"><i class="fa fa-tag"></i> MVP</a>
+          
+            <a href="/tags/MVVM/" rel="tag"><i class="fa fa-tag"></i> MVVM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/" rel="next" title="理解iOS中MVC、MVP及MVVM的架构设计">
+                <i class="fa fa-chevron-left"></i> 理解iOS中MVC、MVP及MVVM的架构设计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-    
-    
-    
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -423,8 +633,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -572,6 +791,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出问题"><span class="nav-number">1.</span> <span class="nav-text">抛出问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一：何为架构设计？"><span class="nav-number">1.1.</span> <span class="nav-text">问题一：何为架构设计？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题二：为什么要关注架构设计？"><span class="nav-number">1.2.</span> <span class="nav-text">问题二：为什么要关注架构设计？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC、MVP及MVVM介绍"><span class="nav-number">2.</span> <span class="nav-text">MVC、MVP及MVVM介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC"><span class="nav-number">2.1.</span> <span class="nav-text">MVC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP"><span class="nav-number">2.2.</span> <span class="nav-text">MVP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM"><span class="nav-number">2.3.</span> <span class="nav-text">MVVM</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1154,7 +1389,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#more");
   
   </script>
 
