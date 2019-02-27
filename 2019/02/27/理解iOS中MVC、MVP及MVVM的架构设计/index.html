@@ -116,18 +116,18 @@
   </script>
 
 
-  <meta name="description" content="Hey，骚年，我带你装逼去呀！">
+  <meta name="description" content="序言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，">
 <meta name="keywords" content="MVC,MVP,MVVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解iOS中MVC、MVP及MVVM的架构设计">
 <meta property="og:url" content="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/index.html">
 <meta property="og:site_name" content="Hey，骚年">
-<meta property="og:description" content="Hey，骚年，我带你装逼去呀！">
+<meta property="og:description" content="序言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-27T08:35:48.976Z">
+<meta property="og:updated_time" content="2019-02-27T15:49:36.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解iOS中MVC、MVP及MVVM的架构设计">
-<meta name="twitter:description" content="Hey，骚年，我带你装逼去呀！">
+<meta name="twitter:description" content="序言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，">
 
 
 
@@ -464,7 +464,29 @@
       
 
       
-        
+        <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><h3 id="为什么要关注架构？"><a href="#为什么要关注架构？" class="headerlink" title="为什么要关注架构？"></a>为什么要关注架构？</h3><p>在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：</p>
+<blockquote>
+<p>因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，很有可能具体的情况就像下面的这样：</p>
+<ol>
+<li>这个类是一个UIViewController的子类 </li>
+<li>数据是直接在UIViewController中存储</li>
+<li>UIView类几乎不做任何时期 </li>
+<li>Model类几乎不做任何时期</li>
+<li>Model仅仅是一个数据结构</li>
+<li>单元测试覆盖不了任何的用例</li>
+</ol>
+</blockquote>
+<p>为了避免发生以上的这些问题我们必须要注重程序的架构，因此一个好的架构应该具备以下几种特点： </p>
+<ul>
+<li><strong>任务均摊</strong>：角色间职责的清晰分配</li>
+<li><strong>可测试性</strong>：通常来自第一个特性（使用适当的系统结构是很容易的）</li>
+<li><strong>易用性</strong>：使用方便，维护成本低</li>
+</ul>
+<h3 id="什么是架构设计？"><a href="#什么是架构设计？" class="headerlink" title="什么是架构设计？"></a>什么是架构设计？</h3><blockquote>
+<p>一个整体的分层？逻辑清晰？还是清晰的分工？对于架构模式来说并没有一个非常明确的定义，比较抽象，在于设计在于架构，不管是小到类与类之间的交互，还是不同的小模块，小版块之间，甚至于在不同的业务之间，我们都可以去从架构的方面去理解，去分析。</p>
+</blockquote>
+<p>在iOS中常见的架构来说，常见有就有这些：MVC、MVP及MVVM。而这些架构都有一个共同特点 : 解耦合。</p>
+<h2 id="MVC、MVP及MVVM分析"><a href="#MVC、MVP及MVVM分析" class="headerlink" title="MVC、MVP及MVVM分析"></a>MVC、MVP及MVVM分析</h2><h3 id="MVC架构设计"><a href="#MVC架构设计" class="headerlink" title="MVC架构设计"></a>MVC架构设计</h3><h3 id="MVP架构设计"><a href="#MVP架构设计" class="headerlink" title="MVP架构设计"></a>MVP架构设计</h3><h3 id="MVVM架构设计"><a href="#MVVM架构设计" class="headerlink" title="MVVM架构设计"></a>MVVM架构设计</h3><h3 id="三种架构优缺点对比"><a href="#三种架构优缺点对比" class="headerlink" title="三种架构优缺点对比"></a>三种架构优缺点对比</h3><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2>
       
     </div>
 
@@ -496,7 +518,7 @@
   <p><span>本文标题:</span><a href="/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/">理解iOS中MVC、MVP及MVVM的架构设计</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 yasirboogo 的个人博客">yasirboogo</a></p>
   <p><span>发布时间:</span>2019年02月27日 - 15:02</p>
-  <p><span>最后更新:</span>2019年02月27日 - 16:02</p>
+  <p><span>最后更新:</span>2019年02月27日 - 23:02</p>
   <p><span>原始链接:</span><a href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/" title="理解iOS中MVC、MVP及MVVM的架构设计">https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/"  aria-label="复制成功！"></i></span>
   </p>
@@ -615,8 +637,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -652,10 +683,6 @@
                     
                       
                     
-                      
-                    
-                      
-                    
                     <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -668,10 +695,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -697,26 +720,6 @@
                   
                 </span>
               
-                <span class="links-of-author-item">
-                  <a href="mailto:yasirboogo@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://plus.google.com/yasirboogo" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://weibo.com" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://qzone.qq.com/" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i>QQ</a>
-                  
-                </span>
-              
             </div>
           
 
@@ -728,28 +731,12 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-globe"></i>
-                推荐阅读
+                推荐链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="区块链" target="_blank">区块链</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="数据挖掘" target="_blank">数据挖掘</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="机器学习" target="_blank">机器学习</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="人工智能" target="_blank">人工智能</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="爬虫" target="_blank">爬虫</a>
+                    <a href="https://www.qiniu.com/" title="七牛云" target="_blank">七牛云</a>
                   </li>
                 
               </ul>
@@ -764,6 +751,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.</span> <span class="nav-text">序言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要关注架构？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要关注架构？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是架构设计？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是架构设计？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC、MVP及MVVM分析"><span class="nav-number">2.</span> <span class="nav-text">MVC、MVP及MVVM分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC架构设计"><span class="nav-number">2.1.</span> <span class="nav-text">MVC架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP架构设计"><span class="nav-number">2.2.</span> <span class="nav-text">MVP架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM架构设计"><span class="nav-number">2.3.</span> <span class="nav-text">MVVM架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种架构优缺点对比"><span class="nav-number">2.4.</span> <span class="nav-text">三种架构优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
