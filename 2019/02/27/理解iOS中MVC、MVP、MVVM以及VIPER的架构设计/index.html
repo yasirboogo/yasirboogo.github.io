@@ -116,25 +116,25 @@
   </script>
 
 
-  <meta name="description" content="序言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，">
-<meta name="keywords" content="MVC,MVP,MVVM">
+  <meta name="description" content="Part One：前言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这">
+<meta name="keywords" content="MVC,MVP,MVVM,VIPER">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解iOS中MVC、MVP及MVVM的架构设计">
-<meta property="og:url" content="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/index.html">
+<meta property="og:title" content="理解iOS中MVC、MVP、MVVM以及VIPER的架构设计">
+<meta property="og:url" content="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/index.html">
 <meta property="og:site_name" content="Hey，骚年">
-<meta property="og:description" content="序言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，">
+<meta property="og:description" content="Part One：前言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-27T16:01:37.817Z">
+<meta property="og:updated_time" content="2019-02-28T03:51:57.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="理解iOS中MVC、MVP及MVVM的架构设计">
-<meta name="twitter:description" content="序言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，">
+<meta name="twitter:title" content="理解iOS中MVC、MVP、MVVM以及VIPER的架构设计">
+<meta name="twitter:description" content="Part One：前言为什么要关注架构？在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：  因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这">
 
 
 
 
 
 
-  <link rel="canonical" href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/"/>
+  <link rel="canonical" href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/"/>
 
 
 
@@ -144,7 +144,7 @@
   };
 </script>
 
-  <title>理解iOS中MVC、MVP及MVVM的架构设计 | Hey，骚年</title>
+  <title>理解iOS中MVC、MVP、MVVM以及VIPER的架构设计 | Hey，骚年</title>
   
 
 
@@ -347,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/">
+    <link itemprop="mainEntityOfPage" href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yasirboogo">
@@ -364,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">理解iOS中MVC、MVP及MVVM的架构设计
+          <h1 class="post-title" itemprop="name headline">理解iOS中MVC、MVP、MVVM以及VIPER的架构设计
               
             
           </h1>
@@ -426,8 +426,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/" itemprop="commentCount"></span>
+                <a href="/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/" itemprop="commentCount"></span>
                 </a>
               </span>条
             
@@ -464,7 +464,7 @@
       
 
       
-        <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><h3 id="为什么要关注架构？"><a href="#为什么要关注架构？" class="headerlink" title="为什么要关注架构？"></a>为什么要关注架构？</h3><p>在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：</p>
+        <h2 id="Part-One：前言"><a href="#Part-One：前言" class="headerlink" title="Part One：前言"></a>Part One：前言</h2><h3 id="为什么要关注架构？"><a href="#为什么要关注架构？" class="headerlink" title="为什么要关注架构？"></a>为什么要关注架构？</h3><p>在提到架构设计的时候，我必须先说清楚为什么要关注架构设计，这里我引用文章中一段话：</p>
 <blockquote>
 <p>因为假如你不关心架构，那么总有一天，需要在同一个庞大的类中调试若干负责的事情，你会发现在这样的条件下，根本不可能在这个类中快速的找到以及有效的修改任何bug。当然，把这样的一个类想象为一个整体是困难的，因此，有可能一些重要的细节总会在这个过程中被忽略。如果现在的你正是处于这样一个开发环境中，很有可能具体的情况就像下面的这样：</p>
 <ol>
@@ -485,8 +485,8 @@
 <h3 id="什么是架构设计？"><a href="#什么是架构设计？" class="headerlink" title="什么是架构设计？"></a>什么是架构设计？</h3><blockquote>
 <p>一个整体的分层？逻辑清晰？还是清晰的分工？对于架构模式来说并没有一个非常明确的定义，比较抽象，在于设计在于架构，不管是小到类与类之间的交互，还是不同的小模块，小版块之间，甚至于在不同的业务之间，我们都可以去从架构的方面去理解，去分析。</p>
 </blockquote>
-<p>就iOS中常见的架构来说，主要可分为三种：MVC、MVP及MVVM。而这三种架构都有一个共同特点：解耦合。</p>
-<h2 id="MVC、MVP及MVVM分析"><a href="#MVC、MVP及MVVM分析" class="headerlink" title="MVC、MVP及MVVM分析"></a>MVC、MVP及MVVM分析</h2><h3 id="MVC架构设计"><a href="#MVC架构设计" class="headerlink" title="MVC架构设计"></a>MVC架构设计</h3><h3 id="MVP架构设计"><a href="#MVP架构设计" class="headerlink" title="MVP架构设计"></a>MVP架构设计</h3><h3 id="MVVM架构设计"><a href="#MVVM架构设计" class="headerlink" title="MVVM架构设计"></a>MVVM架构设计</h3><h3 id="三种架构优缺点对比"><a href="#三种架构优缺点对比" class="headerlink" title="三种架构优缺点对比"></a>三种架构优缺点对比</h3><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2>
+<p>就iOS中常见的架构来说，MV(X)系列主要可分为三种：MVC、MVP及MVVM架构，此外还有VIPER架构。而这几种架构都有一个共同特点：解耦合。</p>
+<h2 id="Part-Two：四种架构介绍"><a href="#Part-Two：四种架构介绍" class="headerlink" title="Part Two：四种架构介绍"></a>Part Two：四种架构介绍</h2><h3 id="MVC架构设计"><a href="#MVC架构设计" class="headerlink" title="MVC架构设计"></a>MVC架构设计</h3><h3 id="MVP架构设计"><a href="#MVP架构设计" class="headerlink" title="MVP架构设计"></a>MVP架构设计</h3><h3 id="MVVM架构设计"><a href="#MVVM架构设计" class="headerlink" title="MVVM架构设计"></a>MVVM架构设计</h3><h3 id="VIPER架构设计"><a href="#VIPER架构设计" class="headerlink" title="VIPER架构设计"></a>VIPER架构设计</h3><h2 id="Part-Three：四种架构优缺点对比"><a href="#Part-Three：四种架构优缺点对比" class="headerlink" title="Part Three：四种架构优缺点对比"></a>Part Three：四种架构优缺点对比</h2><h2 id="Part-Four：小结"><a href="#Part-Four：小结" class="headerlink" title="Part Four：小结"></a>Part Four：小结</h2>
       
     </div>
 
@@ -515,12 +515,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/">理解iOS中MVC、MVP及MVVM的架构设计</a></p>
+  <p><span>本文标题:</span><a href="/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/">理解iOS中MVC、MVP、MVVM以及VIPER的架构设计</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 yasirboogo 的个人博客">yasirboogo</a></p>
   <p><span>发布时间:</span>2019年02月27日 - 15:02</p>
-  <p><span>最后更新:</span>2019年02月28日 - 00:02</p>
-  <p><span>原始链接:</span><a href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/" title="理解iOS中MVC、MVP及MVVM的架构设计">https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP及MVVM的架构设计/"  aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年02月28日 - 11:02</p>
+  <p><span>原始链接:</span><a href="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/" title="理解iOS中MVC、MVP、MVVM以及VIPER的架构设计">https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yasirboogo.github.io/2019/02/27/理解iOS中MVC、MVP、MVVM以及VIPER的架构设计/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -581,6 +581,8 @@
             <a href="/tags/MVP/" rel="tag"><i class="fa fa-tag"></i> MVP</a>
           
             <a href="/tags/MVVM/" rel="tag"><i class="fa fa-tag"></i> MVVM</a>
+          
+            <a href="/tags/VIPER/" rel="tag"><i class="fa fa-tag"></i> VIPER</a>
           
         </div>
       
@@ -702,7 +704,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -761,7 +765,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.</span> <span class="nav-text">序言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要关注架构？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要关注架构？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是架构设计？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是架构设计？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC、MVP及MVVM分析"><span class="nav-number">2.</span> <span class="nav-text">MVC、MVP及MVVM分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC架构设计"><span class="nav-number">2.1.</span> <span class="nav-text">MVC架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP架构设计"><span class="nav-number">2.2.</span> <span class="nav-text">MVP架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM架构设计"><span class="nav-number">2.3.</span> <span class="nav-text">MVVM架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种架构优缺点对比"><span class="nav-number">2.4.</span> <span class="nav-text">三种架构优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-One：前言"><span class="nav-number">1.</span> <span class="nav-text">Part One：前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要关注架构？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要关注架构？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是架构设计？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是架构设计？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-Two：四种架构介绍"><span class="nav-number">2.</span> <span class="nav-text">Part Two：四种架构介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC架构设计"><span class="nav-number">2.1.</span> <span class="nav-text">MVC架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP架构设计"><span class="nav-number">2.2.</span> <span class="nav-text">MVP架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM架构设计"><span class="nav-number">2.3.</span> <span class="nav-text">MVVM架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VIPER架构设计"><span class="nav-number">2.4.</span> <span class="nav-text">VIPER架构设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-Three：四种架构优缺点对比"><span class="nav-number">3.</span> <span class="nav-text">Part Three：四种架构优缺点对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-Four：小结"><span class="nav-number">4.</span> <span class="nav-text">Part Four：小结</span></a></li></ol></div>
             
 
           </div>
